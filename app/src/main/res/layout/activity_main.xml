@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_pager"
@@ -39,31 +39,66 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcv_content"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="5dp">
+                android:layout_height="wrap_content">
 
-            </android.support.v7.widget.RecyclerView>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_test1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="5dp"
+                    android:overScrollMode="never">
 
-            <com.xperfect.tt.demo.widget.indicator.PagerIndicatorView
-                android:id="@+id/piv_pager"
+                </android.support.v7.widget.RecyclerView>
+
+                <com.xperfect.tt.demo.widget.indicator.PagerIndicatorView
+                    android:id="@+id/piv_test1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:minHeight="10dp"
+                    android:orientation="horizontal"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="5dp"
-                android:minHeight="10dp"
-                android:orientation="horizontal"
-                android:gravity="center"/>
+                android:layout_height="wrap_content">
 
-        </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_test2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="5dp"
+                    android:overScrollMode="never">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <com.xperfect.tt.demo.widget.indicator.PagerIndicatorView
+                    android:id="@+id/piv_test2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:minHeight="10dp"
+                    android:orientation="horizontal"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </ScrollView>
 

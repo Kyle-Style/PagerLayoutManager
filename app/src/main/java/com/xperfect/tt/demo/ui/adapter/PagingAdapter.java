@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,7 +27,7 @@ import java.util.List;
  */
 public class PagingAdapter extends RecyclerView.Adapter<PagingAdapter.DefaultViewHolder> {
 
-	ArrayList<AppInfo> items = new ArrayList<>();
+	List<AppInfo> items = new ArrayList<>();
 
 	Context context;
 
@@ -34,11 +35,11 @@ public class PagingAdapter extends RecyclerView.Adapter<PagingAdapter.DefaultVie
 		this.context = context;
 	}
 
-	public ArrayList<AppInfo> getItems() {
+	public List<AppInfo> getItems() {
 		return items;
 	}
 
-	public void setItems(ArrayList<AppInfo> items) {
+	public void setItems(List<AppInfo> items) {
 		this.items = items;
 	}
 
@@ -69,6 +70,16 @@ public class PagingAdapter extends RecyclerView.Adapter<PagingAdapter.DefaultVie
 					}
 				}
 		);
+		switch(position%3){
+			case 1:
+				holder.llItem.setBackgroundColor(Color.parseColor("#ff0000"));
+				break;
+			case 2:
+				holder.llItem.setBackgroundColor(Color.parseColor("#ffff00"));
+				break;
+			default:
+				holder.llItem.setBackgroundColor(Color.parseColor("#ffffff"));
+		}
 	}
 
 	@Override

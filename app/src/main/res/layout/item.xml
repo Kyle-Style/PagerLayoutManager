@@ -2,11 +2,16 @@
 <LinearLayout
     android:id="@+id/ll_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:background="#770000ff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:background="#ff0000"/>
     
     <ImageView
         android:id="@+id/iv_app_icon"
@@ -15,9 +20,9 @@
 
     <TextView
         android:id="@+id/tv_app_name"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="#ff0000"
+        android:background="#22ff0000"
         android:gravity="center"
         android:textColor="#fff"
         android:text="哈哈哈哈"
